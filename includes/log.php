@@ -32,28 +32,28 @@ function logwrite($type, $message)
 
 	if ($type == "error")
 	{
-		$write = "[".date("d.m.y H:i")."] [ERROR] \n".$message."\n";
+		$write = "[".date("d.m.y H:i")."] [ERROR] ".$message."\n";
 		$fp = fopen("log/error.txt", "a+"); // Открываем файл в режиме записи 
 		fwrite($fp, $write); // Запись в файл
 		fclose($fp); //Закрытие файла
 	}
 	elseif ($type == "good")
 	{
-		$write = "[".date("d.m.y H:i")."] [GOOD] \n".$message."\n";
+		$write = "[".date("d.m.y H:i")."] [GOOD] ".$message."\n";
 		$fp = fopen("log/good.txt", "a+"); // Открываем файл в режиме записи 
 		fwrite($fp, $write); // Запись в файл
 		fclose($fp); //Закрытие файла
 	}
 	elseif ($type == "access")
 	{
-		$write = "[".date("d.m.y H:i")."] [ACCESS] /n/r".$message."\n\r";
+		$write = "[".date("d.m.y H:i")."] [ACCESS] ".$message."\n";
 		$fp = fopen("log/access.txt", "a+"); // Открываем файл в режиме записи 
 		fwrite($fp, $write); // Запись в файл
 		fclose($fp); //Закрытие файла
 	}
 	elseif ($type == "operation")
 	{
-		$write = "[".date("d.m.y H:i")."] [OPERATION] \n".$message."\n";
+		$write = "[".date("d.m.y H:i")."] [OPERATION] ".$message."\n";
 		$fp = fopen("log/operation.txt", "a+"); // Открываем файл в режиме записи 
 		fwrite($fp, $write); // Запись в файл
 		fclose($fp); //Закрытие файла
